@@ -1,0 +1,93 @@
+{
+  "common": {
+    "name": "Polaris",
+    "cancel": "Cancel"
+  },
+  "home": {
+    "title": "Accelerometer",
+    "viewOneButton": "Go to View One",
+    "viewTwoButton": "Go to View Two",
+    "viewThreeButton": "Go to View Three",
+    "settingsButton": "Go to Settings",
+    "listViewButton": "Go to List View",
+    "cameraButton": "Go to Camera",
+    "pushNotificationsButton": "Go to Push Notifications",
+    "responsiveButton": "Go to responsive example",
+    "authButton": "Go to auth example",
+    "qrCodeButton": "Go to QR Code",
+    "mapButton": "Go to map"
+  },
+  "viewOne": {
+    "title": "View One",
+    "message": "View One Screen"
+  },
+  "viewTwo": {
+    "title": "View Two",
+    "message": "View Two Screen"
+  },
+  "viewThree": {
+    "title": "View Three",
+    "message": "View Three Screen"
+  },
+  "listView": {
+    "title": "List View",
+    "message": "List View Screen",
+    "sortBy": "Sort by:",
+    "id": "ID",
+    "score": "Score",
+    "viewButton": "View {{id}}"
+  },
+  "pushNotificationsView": {
+    "title": "Push Notifications",
+    "permissionsRejectedAlert": "Polaris wasn't granted Notification permissions",
+    "physicalDevice": "Must use physical device for Push Notifications",
+    "invalidVapidKey": "To use web push notifications, you must generate valid VAPID keys",
+    "sendNotificationButton": "Press to Send Notification",
+    "messageTitle": "Original Title",
+    "messageBody": "And here is the body!"
+  },
+  "responsiveView": {
+    "textWeb": "Will change width when viewport",
+    "textNative": "Always full width on native"
+  },
+  "authView": {
+    "title": "Login",
+    "loginButton": "Login",
+    "welcomeText": "Welcome",
+    "errorDatabase": "Sorry there was a problem with the database.",
+    "errorTitle": "Sorry there was a problem with logging in.",
+    "defaultErrorMessage": "something went wrong"
+  },
+  "movementView": {
+    "title": "Track Movement"
+  },
+  "listItem": {
+    "title": "List item {:id}"
+  },
+  "settings": {
+    "title": "Settings",
+    "languageLabel": "Language:"
+  },
+  "camera": {
+    "title": "Camera",
+    "permissionDenied": "No access to camera"
+  },
+  "qrCode": {
+    "title": "QR Code",
+    "scanAgainButton": "Tap to Scan Again"
+  },
+  "nav": {
+    "topLeft": "Top Left",
+    "topCenter": "Top Center",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    }
+  },
+  "map": {
+    "title": "Map"
+  },
+  "errors": {
+    "404": "404: Page {{path}}not found"
+  }
+}

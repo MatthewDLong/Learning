@@ -1,0 +1,27 @@
+{
+  "name": "photos",
+  "version": "1.0.0",
+  "license": "UNLICENCED",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy",
+    "dev": "NODE_ENV=development sls --stage dev offline start",
+    "dev:debug": "SLS_DEBUG=* sls --stage dev offline start",
+    "dynamodb:install": "sls --stage dev dynamodb install",
+    "dynamodb:remove": "sls --stage dev dynamodb remove",
+    "dynamodb:start": "NODE_ENV=development sls --stage dev dynamodb start"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.4",
+    "apollo-server-lambda": "^2.18.2",
+    "dynamoose": "^2.3.0",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "serverless": "^2.6.0",
+    "serverless-dynamodb-local": "^0.2.37",
+    "serverless-offline": "v6.8.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "^4.0.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "16_12",
+  "version": "1.0.0",
+  "description": "Convert integer to Roman Numeral. Supports numbers between 1 and 3999.",
+  "main": "converter.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": {
+    "name": "Matt Long",
+    "url": "https://mattlongcode.github.io/"
+  },
+  "license": "UNLICENCED",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}

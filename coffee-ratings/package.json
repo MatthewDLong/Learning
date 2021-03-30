@@ -1,0 +1,43 @@
+{
+  "name": "coffee-ratings",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build:all": "lerna run --parallel build",
+    "clean": "lerna clean",
+    "clean:all": "npm run clean:env && npm run clean",
+    "clean:env": "node bin/cleanEnv.js",
+    "create:env": "node bin/createEnv.js",
+    "db:create-volume": "docker volume create --name titus-pg-data -d local",
+    "db:delete": "lerna run --stream db:delete",
+    "db:down": "lerna run --stream db:down",
+    "db:migrate": "lerna run --stream db:migrate",
+    "db:seed": "lerna run --stream db:seed",
+    "db:server:start": "lerna run --stream db:server:start",
+    "db:truncate": "lerna run --stream db:truncate",
+    "db:up": "lerna run --stream db:up",
+    "lint:all": "lerna run --parallel lint",
+    "lint:fix": "lerna run --parallel lint:fix",
+    "lint:staged": "lerna run lint:staged --concurrency 1",
+    "postinstall": "lerna bootstrap",
+    "start:all": "lerna run --parallel start",
+    "start:docs": "docsify serve ./docs --port 4000",
+    "test": "jest --config .jest.json --coverage",
+    "test:all": "npm run test && lerna run --parallel test",
+    "test:related": "lerna run test:related",
+    "deploy:ci": "lerna run deploy:ci",
+    "deploy": "lerna run deploy"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.2",
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:staged && npm run test:related",
+      "pre-push": "npm run lint:all && npm run test"
+    }
+  }
+}

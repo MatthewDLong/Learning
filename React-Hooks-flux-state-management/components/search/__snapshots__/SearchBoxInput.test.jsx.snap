@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<input
+  className="searchbox__input"
+  id="searchbox__input"
+  name="name"
+  onChange={[Function]}
+  placeholder="city, airport, station, region and district..."
+  type="text"
+/>
+`;

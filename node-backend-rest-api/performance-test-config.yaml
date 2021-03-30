@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:7000"
+  http:
+    pool: 10
+  phases:
+    - duration: 300
+      arrivalRate: 20
+      name: Load test
+scenarios:
+  - flow:
+      - get:
+          url: "/cards"
+          headers:
+            Cache-Control: "public, max-age=3600"

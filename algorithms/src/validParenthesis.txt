@@ -1,0 +1,65 @@
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+
+Example 1:
+Input: s = "()"
+Output: true
+
+Example 2:
+Input: s = "()[]{}"
+Output: true
+
+Example 3:
+Input: s = "(]"
+Output: false
+
+Example 4:
+Input: s = "([)]"
+Output: false
+
+Example 5:
+Input: s = "{[]}"
+Output: true
+ 
+
+Constraints:
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
+
+-----------
+
+Pseudocode
+
+Linear time complexity: O(n)
+
+function validParenthesis (s (string))
+  var m (map) = {
+    ) = (
+    ] = [
+    } = {
+  }
+
+  var s (stack)
+  var lastOpeningParenthesis (string)
+
+  for char in string
+
+    if m contains char
+      if stack is empty
+        lastOpeningParenthesis = #
+      else
+        lastOpeningParenthesis = pop top char from stack
+        if lastOpeningParenthesis not equal to m.get char
+          return false
+
+    if stack is empty
+      return true
+
+    else
+      return false
+
+  endfor
+endfunction

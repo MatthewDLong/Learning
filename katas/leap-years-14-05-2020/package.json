@@ -1,0 +1,19 @@
+{
+  "name": "leap-years-14-05-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "jest": "^25.0.0",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.2"
+  }
+}

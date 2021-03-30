@@ -1,0 +1,56 @@
+Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return true. Otherwise, return false.
+
+Example 1:
+Input: nums = [-1,0,3,5,9,12], target = 9
+Output: true
+
+Example 2:
+Input: nums = [-1,0,3,5,9,12], target = 2
+Output: false
+
+Constraints:
+
+1 <= nums.length <= 104
+-9999 <= nums[i], target <= 9999
+
+All the integers in nums are unique.
+nums is sorted in ascending order.
+
+--
+
+[-1,0,3,5,9,12]
+
+[9,12]
+
+we have found our target, retunr true
+
+9
+
+--
+
+Pseudocode
+
+recursive binarySearch function (nums array, target integer)
+  var left = 0
+  var right = nums length - 1
+  var middle index
+  var middle element
+
+  middle index = rounded down ( nums / 2 )
+  middle element = nums[middle index]
+
+  while target greater than left and less than right
+    if target equal to middle element
+      // base case
+      return true
+    else if target less than middle element
+      binarySearch( first half of nums, target )
+    else if target greater than middle element
+      binarySearch ( second half of nums, target )
+    endif
+  endwhile
+
+  return false
+endfunction
+
+O(log n)

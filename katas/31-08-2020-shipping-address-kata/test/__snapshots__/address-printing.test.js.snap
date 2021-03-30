@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`address label printer running the application prints out a list of labels 1`] = `
+"Sam Smith
+My flat name
+My Apartment building
+My complex
+My Street
+MY TOWN
+MY REGION
+MY1 2HR
+UNITED KINGDOM
++--------
+Alex Johnson
+My place
+MY TOWN
+MY REGION
+MY2 3PL
+UNITED KINGDOM
++--------
+CHRIS RUSSO
+VIA APPIA NUOVA 123/4
+00184 ROMA RM
+ITALY
++--------
+"
+`;

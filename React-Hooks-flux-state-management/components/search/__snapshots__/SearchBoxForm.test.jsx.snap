@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBoxForm renders correctly 1`] = `
+<form
+  className="searchbox__form"
+  id="searchbox"
+  role="search"
+>
+  <SearchBoxHeading />
+  <SearchBoxLabel />
+  <SearchBoxInput
+    maxResults={6}
+  />
+</form>
+`;

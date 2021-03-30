@@ -1,0 +1,57 @@
+Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+Example 2:
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+
+Constraints:
+1 <= s.length <= 2 * 105
+s consists only of printable ASCII characters.
+
+--------------
+
+s = "A man, a plan, a canal: Panama"
+
+Algorithm
+
+1. Remove non alphanumeric characters
+2. Convert the string to lowercase, store this in a variable
+3. Reverse the string, store this in a variable
+4. Compare the lower case string to the reversed string
+5. If the original string is equal to the reversed string, return true else return false
+
+Time complexity: O(n)
+
+Pseudocode
+
+function isPalindrome (s (string))
+  
+  // create some variables
+  var lower
+  var reverse = empty string
+  var alpha numeric character Map = { a-z, 0-9 }
+
+  // remove non alphanumeric characters
+  for char in s
+    if alpha numeric map has char
+      append char to lower
+  endfor
+
+  // reverse the string
+  for i from end of lower until i greater than or equal to 0
+    append lower[i] to reverse
+  endfor
+
+  // compare the string, return the result
+  if lower equal to reverse
+    return true
+  else
+    return false
+endfunction

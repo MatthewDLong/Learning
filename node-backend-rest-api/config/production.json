@@ -1,0 +1,7 @@
+{
+  "services": {
+    "moonpig": {
+      "baseURL": "https://moonpig.github.io"
+    }
+  }
+}

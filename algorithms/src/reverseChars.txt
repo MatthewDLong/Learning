@@ -1,0 +1,12 @@
+Reverse the order of every character in every space seperated word in a given string.
+
+Example 1
+
+Input: 'foo bar'
+Output: 'oof rab'
+
+
+Example 2
+
+Input: 'baz'
+Output: 'zab'

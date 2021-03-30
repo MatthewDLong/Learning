@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+
+  titus-db:
+    container_name: titus-db
+    image: postgres:10.4-alpine
+    environment:
+      - POSTGRES_USER=titus
+      - POSTGRES_PASSWORD=titus
+      - POSTGRES_DB=titus
+    ports:
+      - 5432:5432
+    volumes:
+      - titus-pg-data:/var/lib/postgresql/data
+      
+volumes:
+  titus-pg-data:
+    external: false

@@ -1,0 +1,15 @@
+{
+  "name": "args-14-05-2020",
+  "version": "1.0.0",
+  "description": "## Kata Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}

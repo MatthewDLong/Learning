@@ -1,0 +1,68 @@
+.searchbox {
+  width: 100%;
+}
+
+.searchbox__form {
+  background-color: #f3ce56;
+  padding: 8px;
+}
+
+.searchbox__title {
+  color: #333;
+  font-family: Ubuntu, Open Sans, Segoe UI, Tahoma, sans-serif;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.searchbox__label {
+  color: #444;
+  display: block;
+  font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 1.25rem;
+  padding-bottom: 4px;
+}
+
+.searchbox__input {
+  border: solid 1px #c8ae5b;
+  border-radius: 4px;
+  font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  height: 48px;
+  min-width: 49px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.searchbox__input:focus {
+  border-color: #0f6193;
+  outline: 0;
+}
+
+.textarea {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  min-height: 24rem;
+  padding: 20px;
+  width: 25%;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchbox__form,
+  .searchbox__results {
+    width: 512px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .searchbox__form {
+    padding: 24px;
+  }
+}

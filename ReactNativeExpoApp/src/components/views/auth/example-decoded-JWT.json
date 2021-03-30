@@ -1,0 +1,17 @@
+{
+  "aud": "IQjCjg5E2IB7nR0Kp26yZsiV8r6OJuvV",
+  "email": "1992.mdl@gmail.com",
+  "email_verified": true,
+  "exp": 1609367196,
+  "family_name": "Long",
+  "given_name": "Matt",
+  "iat": 1609331196,
+  "iss": "https://dev-pbiznxd2.eu.auth0.com/",
+  "locale": "en-GB",
+  "name": "Matt Long",
+  "nickname": "1992.mdl",
+  "nonce": "nonce",
+  "picture": "https://lh3.googleusercontent.com/a-/AOh14GgYGAvTf9-TaKaPspadpQGQj3OWvzzkBuARVuos2_g=s96-c",
+  "sub": "google-oauth2|103386242928830374219",
+  "updated_at": "2020-12-30T12:26:36.727Z"
+}

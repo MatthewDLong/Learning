@@ -1,0 +1,16 @@
+{
+  "name": "averages-18-01-2020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt Long",
+    "url": "https://github.com/MattLongCode/profile"
+  },
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  }
+}

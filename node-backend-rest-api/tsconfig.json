@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "outDir": "build",
+    "target": "es2019",
+    "module": "CommonJS"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/__tests__"]
+}

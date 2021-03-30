@@ -1,0 +1,8 @@
+node_modules
+build/*
+coverage/*
+yarn-error.log
+.DS_Store
+coverage
+*.log
+.env
