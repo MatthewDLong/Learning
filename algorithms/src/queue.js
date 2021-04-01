@@ -28,7 +28,7 @@ class Queue {
 
   /** Checks whether the queue is empty or not. */
   isEmpty() {
-    return this.elements.length === 0;
+    return this.pStart >= this.elements.length;
   }
 }
 
@@ -36,7 +36,7 @@ var q = new Queue();
 q.enqueue("a");
 q.enqueue("b");
 q.enqueue("c");
-q.enqueue("d");
 q.dequeue();
-var e = q.front();
-console.log(e); // b
+q.dequeue();
+console.log(q.isEmpty()); // false
+console.log(q.front()); // c
