@@ -10,6 +10,10 @@ class Queue {
   dequeue() {
     return this.items.shift();
   }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
 }
 
 var q = new Queue(["a", "b", "c"]);
