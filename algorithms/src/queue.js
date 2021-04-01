@@ -1,22 +1,42 @@
 class Queue {
-  constructor(items = []) {
-    this.items = items;
+  constructor() {
+    // a pointer to indicate the start position
+    this.pStart = 0;
+    // store elements
+    this.elements = [];
   }
 
-  enqueue(item) {
-    this.items.push(item);
+  /** Insert an element into the queue. Return true if the operation is successful. */
+  enqueue(element) {
+    this.elements.push(element);
+    return true;
   }
 
+  /** Delete an element from the queue. Return true if the operation is successful. */
   dequeue() {
-    return this.items.shift();
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.pStart++;
+    return true;
   }
 
+  /** Get the front item from the queue. */
+  front() {
+    return this.elements[this.pStart];
+  }
+
+  /** Checks whether the queue is empty or not. */
   isEmpty() {
-    return this.items.length === 0;
+    return this.elements.length === 0;
   }
 }
 
-var q = new Queue(["a", "b", "c"]);
+var q = new Queue();
+q.enqueue("a");
+q.enqueue("b");
+q.enqueue("c");
 q.enqueue("d");
-var c = q.dequeue();
-console.log(c); // a
+q.dequeue();
+var e = q.front();
+console.log(e); // b
