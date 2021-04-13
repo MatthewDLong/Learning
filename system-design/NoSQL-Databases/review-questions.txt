@@ -1,6 +1,6 @@
 NoSQL for Mere Mortals
 
-Chapter 2. Variety of NoSQL Databases.
+Chapter 2. Different Databases for Different Requirements.
 
 1. If the layout of records in a file data management system changes, what else must change? Application code.
 
