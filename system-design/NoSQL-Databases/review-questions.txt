@@ -1,0 +1,163 @@
+NoSQL for Mere Mortals
+
+Chapter 2. Variety of NoSQL Databases.
+
+1. If the layout of records in a file data management system changes, what else must change? Application code.
+
+2. What kind of relation is supported in a hierarchical data management system?
+
+a. *Parent-child*
+
+b. Many-to-many
+
+c. Many-to-many-to-many
+
+d. No relations are allowed.
+
+3. What kind of relation is supported in network data management systems?
+
+a. Parent-child
+
+b. Many-to-many
+
+c. *Both parent-child and many-to-many*
+
+d. No relations are allowed.
+
+4. Give an example of a SQL data manipulation language statement.
+
+INSERT INTO employees(employee_id, first_name, last_name)
+VALUES (100, 'foo', 'bar');
+
+5. Give an example of a SQL data definition language statement.
+
+CREATE TABLE employees(
+employee_id INT,
+first_name VARCHAR(50),
+last_name VARCHAR(50)
+);
+
+6. What is scaling up? Vertical scaling, adding resources (CPU, memory, disk space) to aserver.
+
+7. What is scaling out? Horizontal scaling, adding more servers that form a cluster.
+
+8. Are NoSQL databases likely to displace relational databases as relational databases displaced earlier types of data management systems?
+
+No. They complement each other and will continue to do so. They will incorporate features from each other.
+
+9. Name four required components of a relational database management system (RDBMS).
+
+Data dictionary.
+
+Query Language.
+
+Memory management.
+
+Storage management.
+
+10. Name three common major components of a database application.
+
+UI
+
+Business logic
+
+Database code
+
+Schema, tables, views
+
+11. Name four motivating factors for database designers and other IT professionals to develop and use NoSQL databases.
+
+Scalability; To scale to hundreds of millions of read and write operations correlating to users of web applications.
+
+Availability: Websites must / should have 99.999 availability something like five nines.
+
+Fault tolerance: When a natural disaster occurs, a single data cener power outage, hardware failure of a single server, a network failure or a partition occurs, the website and the database system should continue to accept reads and writes without degrading user experience. NoSQL databases can help achieve this requirement using horizontal scaling.
+
+Performance: Reads and writes should be fast and performance should not degrade as a website and a database scales.
+
+Cost: As a website, user requests, database reads and writes scale, cost should not increase exponentially. NoSQL databases can potentially help with this.
+
+If consistency is the priority e.g. in financial transactions for a bank, then consistency is a higher priority, therefore a relational database system would probably be a better choice: e.g. PostgresSQL which offers atomic, consistent, isolated and durable (ACID) transactions by default.
+
+If scalability, availability, performance, and cost more important than atomic, consistent, isolated, durable (ACID) transactions then a NoSQL database is a better choice.
+
+Chapter 15. Guidelines for Selecting a Database
+
+Review questions
+
+1. Name two use cases for key-value databases.
+
+  1. Storing transient data such as a shopping cart contents.
+
+  2. Caching data from relational databases to improve performance.
+
+  3. Storing user preferences in a web app.
+
+2. Describe two reasons for choosing a key-value database for your application.
+
+  1. There is a need for variable attributes.
+  
+  2. When you have a simple data structure with scalar values.
+
+3. Name two use cases for document databases.
+
+  1. An online music library that needs to store lots of related data about artists, songs, and albums.
+
+  2. A book store that needs to store lots of related data about books, authors and stock levels.
+
+  3. Content management systems.
+
+  4. Back-end support for mobile device applications.
+
+4. Describe two reasons for choosing a document database for your application.
+
+  1. There is a need for flexible data structures.
+
+  2. You need to query related data with accurate queries or there is a wide variety of query patterns.
+
+5. Name two use cases for column family databases.
+
+  1. Collecting and analyzing log data from a large number of devices.
+
+  2. Analyzing customer characteristics to generate personalized offers.
+
+6. Describe two reasons for choosing a column family database for your application.
+
+  1. You need big data scale reads and writes that are eventually consistent.
+
+  2. There is a need for multi–data center replication.
+
+7. Name two use cases for graph databases.
+
+  1. Modelling user relationships in a social network.
+
+  2. Modelling computer networks.
+
+  3. Modlling roads, traffic, road works and road sign relationships in a city.
+
+8. Describe two reasons for choosing a graph database for your application.
+
+  1. You need to link objects together in your data model and rapidly traverse paths between entities.
+
+  2. Querying linked data.
+
+9. Name two types of applications well suited for relational databases.
+
+  1. Parking space bookng system.
+
+  2. A book store that needs to store lots of related data about books, authors and stock levels.
+
+10. Discuss the need for both NoSQL and relational databases in enterprise data management.
+
+There are benefits of using both relational databases and also NoSQL databases.
+
+Relational SQL databases are good when the data schema is well known ahead of time, early on in a project lifecycle. Often SQL database systems are ACID compliant and have strong data consistency, and good data integrity, with a trade off of higher latency or reduced performance.
+
+NoSQL databases are good when the data model needs to be flexible. If low latency and high performance is more important than strong data consistency then NoSQL is god for fast reads and writes with eventual consistency,
+
+There are managed services for relational databases such as AWS Relational Database Service which provides commercial grade availability, scaling, performance, backups, recovery, fault tolerance, and security.
+This is a serverless option, no hardware or servers to provision.
+
+There are also managed services for NoSQL databases such as AWS DynamoDB, a key-value and document store.
+This is a serverless option, no hardware or servers to provision.
+Provides virtualy unlimited scaling (upto 10 trillion requests per day), handle peaks of 20 million requests per second, it has build in backup, restore, is highly available, resilient and highly performant.
