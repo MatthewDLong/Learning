@@ -1,0 +1,15 @@
+.search__container {
+  border: solid 1px blue;
+}
+
+.search__label {
+  border: solid 1px green;
+}
+
+.search__input {
+  color: purple;
+}
+
+.search__input__blue {
+  color: blue;
+}
