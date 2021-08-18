@@ -1,32 +1,60 @@
-const fs = require("fs");
-const path = require("path");
+const { readdir, readFile, stat } = require("fs");
+const { join } = require("path");
 
-const fileSearch = (dir, searchTerm) => {
-  let filesContainingSearchTerm = new Map();
+const fileSearchRecursive = (path, state, searchTerm, cb) => {
+  state.ops++;
 
-  const findSearchTerm = (searchDir) => {
-    const files = fs.readdirSync(path.join(process.cwd(), searchDir), {
-      withFileTypes: true,
-    });
+  readdir(path, (err, files) => {
+    state.ops--;
+    if (err) {
+      cb(err);
+    }
 
-    files.forEach((file) => {
-      if (!file.isDirectory()) {
-        if (
-          fs
-            .readFileSync(path.join(process.cwd(), searchDir, file.name))
-            .includes(searchTerm)
-        ) {
-          filesContainingSearchTerm.set(file.name, "found");
+    for (const file of files) {
+      const newPath = join(path, file);
+
+      state.ops++;
+      stat(newPath, (err, stats) => {
+        state.ops--;
+
+        if (err) {
+          cb(err);
         }
-      } else {
-        findSearchTerm(file.name);
-      }
-    });
-  };
 
-  findSearchTerm(dir);
+        if (stats.isDirectory()) {
+          return fileSearchRecursive(newPath, state, searchTerm, cb);
+        }
 
-  return filesContainingSearchTerm.size > 0 ? "found" : "notfound";
+        if (stats.isFile()) {
+          state.ops++;
+          readFile(newPath, "utf8", (err, fileContent) => {
+            state.ops--;
+
+            if (err) {
+              cb(err);
+            }
+
+            if (fileContent.toString().includes(searchTerm)) {
+              state.filesContainingSearchTerm.push(newPath);
+            }
+
+            if (state.ops === 0) {
+              return cb(null, state.filesContainingSearchTerm);
+            }
+          });
+        }
+      });
+    }
+  });
+};
+
+const fileSearch = (path, searchTerm, cb) => {
+  fileSearchRecursive(
+    path,
+    { ops: 0, filesContainingSearchTerm: [] },
+    searchTerm,
+    cb
+  );
 };
 
 module.exports = fileSearch;

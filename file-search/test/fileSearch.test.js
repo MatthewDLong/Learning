@@ -6,15 +6,26 @@ const {
 
 const fileSearch = require("../fileSearch");
 
-afterEach(() => {
+const assert = require("assert");
+
+// Begin test
+// it should returns a array of file paths that contain the given search term
+// Arrange
+makeTestDirectory("testDir");
+makeTestDirectory("testDir/bar");
+makeTestDirectory("testDir/bar/baz");
+writeContentToFile("testDir/bar/baz", "qux.json", '{"message": "qux"}');
+
+// Act
+const searchTerm = "qux";
+fileSearch("testDir", searchTerm, (err, filesContainingSearchTerm) => {
+  // Assert
+  assert.strict.deepEqual(filesContainingSearchTerm, [
+    "testDir/bar/baz/qux.json",
+  ]);
+
+  // Cleanup
   deleteTestDirectory();
 });
 
-it("should return `found` when it finds the search term in any file in a subdirectory", () => {
-  makeTestDirectory("testDir");
-  makeTestDirectory("testDir/bar");
-  writeContentToFile("testDir/bar", "bar.json", '{"baz": "qux"}');
-  process.cwd = jest.fn().mockReturnValue("testDir");
-
-  expect(fileSearch(".", "qux")).toBe("found");
-});
+// End test
