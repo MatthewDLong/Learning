@@ -1,0 +1,24 @@
+{
+  "name": "file-search",
+  "version": "1.0.0",
+  "description": "Write a Node.js CLI (TDD) which takes a directory name and a search term, and searches all of the files in the given directory for the search term.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "<rootDir>/testDir/"
+    ]
+  }
+}
