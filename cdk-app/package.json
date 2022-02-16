@@ -1,0 +1,15 @@
+{
+  "name": "cdk-app",
+  "description": "AWS CDK experiments",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-cdk": "^1.128.0"
+  },
+  "scripts": {
+    "clean": "rm -f cdk.out/*.template.json",
+    "presynth": "npm run clean",
+    "synth": "cdk synth --profile personal",
+    "predeploy": "npm run clean && npm run synth",
+    "deploy": "cdk deploy --all --profile personal"
+  }
+}
