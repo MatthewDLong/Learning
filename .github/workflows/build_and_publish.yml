@@ -1,7 +1,8 @@
 name: Run on release published
 on:
   push:
-    - tags: "*"
+    tags:
+      - "*"
 jobs:
   build_and_publish:
     name: Build and Publish
