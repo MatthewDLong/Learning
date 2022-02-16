@@ -1,4 +1,4 @@
-name: Build and Publish to private PyPi repo
+name: Run on release published
 on:
   release:
     types: [published]
