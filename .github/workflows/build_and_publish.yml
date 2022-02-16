@@ -1,0 +1,13 @@
+name: Build and Publish to private PyPi repo
+on:
+  release:
+    types: [published]
+jobs:
+  build_and_publish:
+  name: Build and Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Hello world
+        run: echo hello world
