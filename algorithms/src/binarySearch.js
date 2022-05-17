@@ -30,18 +30,16 @@ const binarySearchRecursive = (nums, target) => {
   var left = 0;
   var right = nums.length - 1;
   var middleIndex;
-  var middleElement;
 
   while (left <= right) {
-    middleIndex = Math.floor(nums.length / 2);
-    middleElement = nums[middleIndex];
+    middleIndex = left + Math.floor((right - left) / 2);
 
     // base case
-    if (target === middleElement) {
+    if (target === nums[middleIndex]) {
       return true;
-    } else if (target < middleElement) {
+    } else if (target < nums[middleIndex]) {
       return binarySearchRecursive(nums.splice(0, middleIndex), target);
-    } else if (target > middleElement) {
+    } else if (target > nums[middleIndex]) {
       return binarySearchRecursive(
         nums.splice(middleIndex + 1, nums.length),
         target
