@@ -35,24 +35,20 @@ endfunction
 */
 
 const isValidParenthesis = (s) => {
-  var charMap = new Map();
+  const charMap = new Map();
   charMap.set(")", "(");
   charMap.set("]", "[");
   charMap.set("}", "{");
 
-  var stack = [];
+  let stack = [];
 
-  var lastOpeningParenthesis;
+  let lastOpeningParenthesis = stack.length === 0 ? "#" : stack.pop();
 
-  for (const char of s) {
+  for (let char in s) {
     if (charMap.has(char)) {
-      lastOpeningParenthesis = stack.length === 0 ? "#" : stack.pop();
-
       if (lastOpeningParenthesis !== charMap.get(char)) {
         return false;
       }
-    } else {
-      stack.push(char);
     }
   }
 
