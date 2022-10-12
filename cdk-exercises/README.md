@@ -36,7 +36,7 @@ Create and deploy an S3 Bucket which has the following:
 
 - [ ] Configure the CloudFront Distribution to send authenticated requests to Amazon S3 with Origin Access Control (OAC)
 
-- [ ] ![CloudFront S3 Example](./images/S3-cloudfront-edge-locations.jpeg "CloudFront S3 Example")
+![CloudFront S3 Example](./images/S3-cloudfront-edge-locations.jpeg "CloudFront S3 Example")
 
 - [ ] Setup GEO Restriction on the CloudFront Distribution to prevent access from a certain location
 
