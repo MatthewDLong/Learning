@@ -1,0 +1,93 @@
+Udemy Linux System Admin notes
+
+Useful websites:
+linux.com
+kernel.org
+serverfault.com
+
+Useful commands:
+
+man -f passwd
+whatis passwd
+mandb
+which
+history
+export HISTTIMEFORMAT="%d/%m/%y %T - "
+du -h --max-depth=1 *
+echo > file.txt # empty a file without deleting the file
+tar -xvf
+
+Package installation:
+Red Hat Systems:
+
+To install packages on (Red Hat package manager) the rpm command is used
+To install packages on Debian systems e.g. Ubuntu the dpkg command is used
+
+Both rpm and dpkg do not handle dependencies, allow searching or give metadata so:
+
+On Red Hat systems you search for and install packages with yum
+On Debian systems you use apt and apt-get
+
+Jump to beginning of command: ctrl a
+Jump to end of command: ctrl e
+Search commands used: ctrl r
+
+Main file descriptors
+STDIN = 0
+STDOUT = 1
+STDERR = 2
+
+List processes:
+
+ps -ef # All processes in full format
+
+get a pid e.g. 704
+
+sudo ls /proc/704/fd # See file descriptors for given process
+
+Overwrite file content:
+
+echo foo > foo.txt
+
+Append content to file:
+
+echo bar >> foo
+
+find / -name core > output.txt 2> error.txt # Redirect stdout and stderr to text files
+
+find / -name core &> output.txt # Redirect both stdout and stderr to file
+
+bash variables
+
+"$VAR" - substitues the variable value
+'$VAR' - uses the literal value i.e. $VAR
+"${HOME}/centos/workspace" # ${VAR} is recommended to ensure that bash does not look for a var called $HOME/centos/workspace, and it separates the HOME from the rest of the variable.
+
+cut -f 1 < foo.csv # display field 1 from foo.csv where fields are delimited by tabs by default
+
+cut -d, -f 2,3 < foo.csv # display field 2 and 3 from foo.csv where fields are delimited by comma
+
+sort
+
+users.csv content:
+
+id,name,count
+0,foo,1
+2,baz,3
+1,bar,5
+
+sort -t , -k1,1 < users.csv # sort with comma delimited fields, numerical sort by column 1 (id)
+output:
+0,foo,1
+1,bar,5
+2,baz,3
+id,name,count
+
+sort -t , -k2,2 -d < users.csv # sort with comma delimited fields, dictionary sort by column 2 (name)
+output:
+1,bar,5
+2,baz,3
+0,foo,1
+id,name,count
+
+sort -t , -k2,2 -d -r < users.csv # reverse order, sort with comma delimited fields, dictionary sort by column 2 (name)
