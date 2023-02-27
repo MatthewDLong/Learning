@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: webapp
+ namespace: default
+spec:
+ containers:
+ - name: webapp
+   image: nginx
+   imagePullPolicy: Never
+   lifecycle:
+    postStart:
+     httpGet:
+      host: google.com
+      httpHeaders:
+      - name: Accept
+        value: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      path: /search
+      port: 3030
+ affinity:
+  nodeAffinity:
+   preferredDuringSchedulingIgnoredDuringExecution:
+   - weight: 50 
+     preference:
+      matchExpressions:
+      - key: size
+        operator: In
+        values:
+        - medium
+        - large

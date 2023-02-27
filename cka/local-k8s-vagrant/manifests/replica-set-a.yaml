@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: 	ReplicaSet
+metadata:
+  name: replica-set-a
+  namespace: backend
+  labels:
+    layer: backend
+spec:
+  minReadySeconds: 600
+  replicas: 10
+  selector:
+    matchLabels:
+      layer: backend
+    # matchExpressions:
+    #   key: layer
+    #   operator: In
+    #   values:
+    #   - backend
+  template:
+    metadata:
+      name: backend
+      namespace: backend
+    spec:
+      containers:
+      - name: backend
+        image: nginx
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - pwd
+          preStop:
+            exec:
+              command:
+              - echo "foo"
+        env:
+        - name: FOO
+          valueFrom:
+            secretKeyRef:
+              key: FOO
+              name: foo-secret
+              optional: false
+        volumeMounts:
+        - name: aws-volume-a
+          mountPath: "/var/data"
+          readOnly: true
+          subPath: "/foo/bar"
+        tty: true
+        stdin: true
+      nodeSelector:
+        computeSize: medium
+      os:
+        name: linux
+      preemptionPolicy: Never
+      priorityClassName: system-node-critical
+      restartPolicy: Never
+      securityContext:
+        fsGroup: 10
+        runAsGroup: 10
+        runAsNonRoot: true
+      tolerations:
+      - effect: NoExecute
+        key: computeType
+        operator: Equal
+        tolerationSeconds: 60
+        value: fargate
+      volumes:
+      - name: aws-volume-a
+        awsElasticBlockStore:
+          fsType: xfs
+          partition: 1
+          readOnly: true
+          volumeID: abc123
