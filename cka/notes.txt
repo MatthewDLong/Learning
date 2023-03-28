@@ -1,3 +1,11 @@
+cka notes
+
+Get current context
+
+kubectl config current-context
+
+cat ~/.kube/config | grep -i current-context | awk '{print $2}'
+
 kubeadm command to init cluster
 
 kubeadm v1.25.3
@@ -28,20 +36,55 @@ https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
 `kubeadm join 192.168.56.2:6443 --cri-socket=unix:///var/run/cri-dockerd.sock --token rret9n.zlndsbzo5cjlxano --discovery-token-ca-cert-hash sha256:9790d61d4a065fb8538d37e70ec31cebd31517cc01ec2b7652a4800d9a604963`
 
-Concepts reading
+Probes
 
-[] Services, Load Balancing, and Networking
-[] Scheduling, Preemption and Eviction
-[] Policies
-[] Cluster Administration
-[] Configuration
-[] Cluster Architecture
-[] Containers
-[] Workloads
-[] Storage
-[] Security
-[] Extending Kubernetes
+Example readinessProbe, with command array using wget:
 
-Tutorial: Deploying Cassandra with a StatefulSet []
+# 4_pod1.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ready-if-service-ready
+  name: ready-if-service-ready
+spec:
+  containers:
+  - image: nginx:1.16.1-alpine
+    name: ready-if-service-ready
+    resources: {}
+    livenessProbe:
+      exec:
+        command:
+        - 'true'
+    readinessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - 'wget -T2 -O- http://service-am-i-ready:80'
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+# add from here
+# to here
 
-https://kubernetes.io/docs/tutorials/stateful-application/cassandra/
+k8s docs homepage -> cheat sheet -> Viewing and finding resources
+
+Find a key:
+
+k get pods -A
+k describe pod my-pod -o yaml
+k get pods --sort-by=metadata.resourceVersion
+k get pods --sort-by=metadata.creationTimestamp
+k get svc -A --sort-by=metadata.creationTimestamp
+
+
+
+
+
+
+
+
+
+
