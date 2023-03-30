@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Giphy Search - Go</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Giphy Search - Go</title>
+        <link rel="stylesheet" href="/assets/style.css" />
+      </head>
+      <body>
+        <main>
+          <header>
+            <a class="logo" href="/">Giphy Search - Go</a>
+
+            <form action="/search" method="GET">
+              <input
+                autofocus
+                class="search-input"
+                value="{{ .Query }}"
+                placeholder="Enter a search term"
+                type="search"
+                name="q"
+              />
+            </form>
+          </header>
+          <section class="container">
+            <div class="result-count">
+              {{ if .Results }} {{ if eq .Results.Pagination.TotalCount 0 }}
+              <p>
+                No results found for your query: <strong>{{ .Query }}</strong>.
+              </p>
+              {{ else if gt .Results.Pagination.TotalCount 0 }}
+              <p>
+                <strong>{{ .Results.Pagination.Count }}</strong> results found
+                for <strong>{{ .Query }}</strong>
+              </p>
+              {{ end }} {{ end }}
+            </div>
+            <ul class="search-results">
+              {{ range.Results.Data }}
+              <li id="{{.ID}}" class="search-results__item">
+                <img
+                  src="{{.Images.FixedHeight.URL}}"
+                  alt="{{.Title}}"
+                  width="{{.Images.FixedHeight.Width}}"
+                  height="{{.Images.FixedHeight.Height}}"
+                />
+                <p>URL: {{.EmbedURL}}</p>
+                <p>Embed URL: {{.URL}}</p>
+                <p>Rating: {{.Rating}}</p>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
+        </main>
+      </body>
+    </html>
+  </body>
+</html>

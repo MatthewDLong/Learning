@@ -453,7 +453,6 @@ $RECYCLE.BIN/
 
 # Go
 go.work
-go-giphy-search
 
 # docker-compose
 redisinsight
