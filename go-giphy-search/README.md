@@ -16,6 +16,10 @@ Uses the following technologies:
 
 ![Architecture](./docs-images/go-giphy-search.drawio.png)
 
+## Demo
+
+![Demo](./docs-images/demo.gif)
+
 ## Prerequisites
 
 - Go
