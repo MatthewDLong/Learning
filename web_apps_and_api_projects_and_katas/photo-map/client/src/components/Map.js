@@ -8,8 +8,8 @@ import {
   PIN_UPDATED_SUBSCRIPTION,
   PIN_DELETED_SUBSCRIPTION,
 } from "../graphql/subscriptions";
-import Blog from "../components/Blog";
-import PinIcon from "../components/PinIcon";
+import Blog from "./Blog";
+import PinIcon from "./PinIcon";
 import {
   CREATE_DRAFT,
   CREATE_PIN,

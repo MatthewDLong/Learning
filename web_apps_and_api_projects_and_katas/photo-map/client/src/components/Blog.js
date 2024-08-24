@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Context from "../state/context";
-import NoContent from "../components/Pin/NoContent";
-import CreatePin from "../components/Pin/CreatePin";
-import PinContent from "../components/Pin/PinContent";
+import NoContent from "./Pin/NoContent";
+import CreatePin from "./Pin/CreatePin";
+import PinContent from "./Pin/PinContent";
 import { Paper } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 

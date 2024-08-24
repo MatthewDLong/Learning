@@ -1,3 +1,3 @@
 # Learning 👨‍💻📚
 
-A collection of learning / practice projects, katas, and coursework.
+Monorepo: Learning projects, study notes etc...

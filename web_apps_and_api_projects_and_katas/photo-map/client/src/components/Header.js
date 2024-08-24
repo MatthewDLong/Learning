@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Context from "../state/context";
-import Signout from "../components/Auth/Signout";
+import Signout from "./Auth/Signout";
 
 const Header = ({ classes }) => {
   const { state } = useContext(Context);
