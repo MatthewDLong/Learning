@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - cd infrastructure
+      - npm install
+      - npm run build
+      - npm run deploy:production
+  post_build:
+    commands:
+      - echo Build completed on `date`

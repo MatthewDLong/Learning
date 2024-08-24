@@ -1,0 +1,9 @@
+{
+  "app": "npx ts-node bin/eks-cluster.ts",
+  "context": {
+    "env": "production-eu",
+    "clusterName": "triangle",
+    "account": "552740142516",
+    "region": "eu-west-1"
+  }
+}

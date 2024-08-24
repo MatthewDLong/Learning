@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: datadog-api-key
+  namespace: app
+type: Opaque
+data:
+  datadog-api-key: REPLACE_WITH_DATADOG_API_KEY

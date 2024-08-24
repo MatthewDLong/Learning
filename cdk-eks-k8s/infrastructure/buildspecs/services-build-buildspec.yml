@@ -1,0 +1,39 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.7/2023-03-17/bin/linux/amd64/kubectl
+      - chmod +x ./kubectl
+      - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+      - kubectl version --short --client
+      - aws eks update-kubeconfig --name $CLUSTER_NAME --region $AWS_DEFAULT_REGION --role-arn $CLUSTER_ADMIN_ROLE_ARN
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - cd services/hello
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - cd ../..
+
+      - echo Creating DATADOG_API_KEY secret
+      - DATADOG_API_KEY=$(aws secretsmanager get-secret-value --region ${AWS_DEFAULT_REGION} --secret-id datadog-api-key --query SecretString --output text)
+      - BASE64_DATADOG_API_KEY=$(echo -n $DATADOG_API_KEY | base64)
+      - sed -i "s/REPLACE_WITH_DATADOG_API_KEY/$BASE64_DATADOG_API_KEY/" infrastructure/manifests/datadog-api-key.yaml
+
+      - echo Creating DATADOG_AUTH_TOKEN secret
+      - DATADOG_AUTH_TOKEN=$(aws secretsmanager get-secret-value --region ${AWS_DEFAULT_REGION} --secret-id datadog-auth-token --query SecretString --output text)
+      - BASE64_DATADOG_AUTH_TOKEN=$(echo -n $DATADOG_AUTH_TOKEN | base64)
+      - sed -i "s/REPLACE_WITH_DATADOG_AUTH_TOKEN/$BASE64_DATADOG_AUTH_TOKEN/" infrastructure/manifests/datadog-auth-token.yaml
+
+      - echo Deploying k8s infrastructure manifests
+      - kubectl apply -f infrastructure/manifests
+      - echo Deploying k8s microservices manifests
+      - kubectl apply -f services/hello/manifests
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG

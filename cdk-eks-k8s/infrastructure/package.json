@@ -1,0 +1,30 @@
+{
+  "name": "eks-fargate-cluster",
+  "version": "0.4.0",
+  "bin": {
+    "eks-fargate-cluster": "bin/eks-fargate-cluster.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "synth:production": "cdk synth --ci --quiet --all",
+    "predeploy:production": "npm run synth:production",
+    "deploy:production": "cdk deploy --ci --quiet --require-approval never --all",
+    "synth:test": "cdk synth -c env=test-eu -c clusterName=square -c account=427045030739 -c region=eu-west-1 --all",
+    "predeploy:test": "npm run synth:test",
+    "deploy:test": "cdk deploy --ci --quiet --require-approval never -c env=test-eu -c clusterName=square -c account=427045030739 -c region=eu-west-1 --all"
+  },
+  "devDependencies": {
+    "@aws-cdk/lambda-layer-kubectl-v25": "^2.0.3",
+    "@types/node": "18.15.11",
+    "aws-cdk": "^2.76.0",
+    "aws-cdk-lib": "^2.76.0",
+    "constructs": "^10.2.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/jest": "29.5.1",
+    "source-map-support": "^0.5.21"
+  }
+}
