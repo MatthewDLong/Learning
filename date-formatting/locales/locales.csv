@@ -1,0 +1,48 @@
+locale,language,country,dateStyle short,dateStyle medium,dateStyle long,dateStyle full,time style short,time style medium,time style long,time style full
+en-GB,English,United-Kingdom,06/11/2022,6 Nov 2022,6 November 2022,Sunday 6 November 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Mean Time
+en-US,English,United-States,11/6/22,Nov 6 2022,November 6 2022,Sunday November 6 2022,5:52 PM,5:52:47 PM,5:52:47 PM GMT,5:52:47 PM Greenwich Mean Time
+en-AU,English,Australia,6/11/22,6 Nov 2022,6 November 2022,Sunday 6 November 2022,5:52 pm,5:52:47 pm,5:52:47 pm GMT,5:52:47 pm Greenwich Mean Time
+en-BE,English,Belgium,06/11/22,06 Nov 2022,6 November 2022,Sunday 6 November 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Mean Time
+en-JP,English,Japan,11/6/22,Nov 6 2022,November 6 2022,Sunday November 6 2022,5:52 PM,5:52:47 PM,5:52:47 PM GMT,5:52:47 PM Greenwich Mean Time
+en-ZA,English,South-Africa,2022/11/06,06 Nov 2022,06 November 2022,Sunday 06 November 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Mean Time
+be-BY,Byelorussian,Belarus,6.11.22,6.11.2022,6 лістапада 2022 г.,нядзеля 6 лістапада 2022 г.,17:52,17:52:47,17:52:47 GMT,17:52:47 Час па Грынвічы
+bg-BG,Bulgarian,Bulgaria,6.11.22 г.,6.11.2022 г.,6 ноември 2022 г.,неделя 6 ноември 2022 г.,17:52 ч.,17:52:47 ч.,17:52:47 ч. Гринуич,17:52:47 ч. Средно гринуичко време
+ca-ES,Catalan,Spain,6/11/22,6 de nov. 2022,6 de novembre de 2022,diumenge 6 de novembre de 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 (Hora del Meridià de Greenwich)
+cs-CZ,Czech,Czech-Republic,06.11.22,6. 11. 2022,6. listopadu 2022,neděle 6. listopadu 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwichský střední čas
+da-DK,Danish,Denmark,06.11.2022,6. nov. 2022,6. november 2022,søndag den 6. november 2022,17.52,17.52.47,17.52.47 GMT,17.52.47 GMT
+de-CH,German,Switzerland,06.11.22,06.11.2022,6. November 2022,Sonntag 6. November 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Mittlere Greenwich-Zeit
+de-DE,German,Germany,06.11.22,06.11.2022,6. November 2022,Sonntag 6. November 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Mittlere Greenwich-Zeit
+el-GR,Greek,Greece,6/11/22,6 Νοε 2022,6 Νοεμβρίου 2022,Κυριακή 6 Νοεμβρίου 2022,5:52 μ.μ.,5:52:47 μ.μ.,5:52:47 μ.μ. GMT,5:52:47 μ.μ. Μέση ώρα Γκρίνουιτς
+es-ES,Spanish,Spain,6/11/22,6 nov 2022,6 de noviembre de 2022,domingo 6 de noviembre de 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 (hora del meridiano de Greenwich)
+fi-FI,Finnish,Finland,6.11.2022,6.11.2022,6. marraskuuta 2022,sunnuntai 6. marraskuuta 2022,17.52,17.52.47,17.52.47 UTC,17.52.47 Greenwichin normaaliaika
+fr-BE,French,Belgium,6/11/22,6 nov. 2022,6 novembre 2022,dimanche 6 novembre 2022,17:52,17:52:47,17:52:47 UTC,17 h 52 min 47 s heure moyenne de Greenwich
+fr-CA,French,Canada,2022-11-06,6 nov. 2022,6 novembre 2022,dimanche 6 novembre 2022,17 h 52,17 h 52 min 47 s,17 h 52 min 47 s UTC,17 h 52 min 47 s heure moyenne de Greenwich
+fr-CH,French,Switzerland,06.11.22,6 nov. 2022,6 novembre 2022,dimanche 6 novembre 2022,17:52,17:52:47,17:52:47 UTC,17.52:47 h heure moyenne de Greenwich
+fr-FR,French,France,06/11/2022,6 nov. 2022,6 novembre 2022,dimanche 6 novembre 2022,17:52,17:52:47,17:52:47 UTC,17:52:47 heure moyenne de Greenwich
+hr-HR,Croatian,Croatia,06. 11. 2022.,6. stu 2022.,6. studenoga 2022.,nedjelja 6. studenoga 2022.,17:52,17:52:47,17:52:47 GMT,17:52:47 (univerzalno vrijeme)
+hu-HU,Hungarian,Hungary,2022. 11. 06.,2022. nov. 6.,2022. november 6.,2022. november 6. vasárnap,17:52,17:52:47,17:52:47 GMT,17:52:47 greenwichi középidő téli idő
+is-IS,Icelandic,Iceland,6.11.2022,6. nóv. 2022,6. nóvember 2022,sunnudagur 6. nóvember 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich-staðaltími
+it-CH,Italian,Switzerland,06.11.22,6 nov 2022,6 novembre 2022,domenica 6 novembre 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Ora del meridiano di Greenwich
+it-IT,Italian,Italy,06/11/22,6 nov 2022,6 novembre 2022,domenica 6 novembre 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Ora del meridiano di Greenwich
+ja-JP,Japanese,Japan,2022/11/06,2022/11/06,2022年11月6日 2022年11月6日日曜日,17:52,17:52:47,17:52:47, GMT 17時52分47秒 グリニッジ標準時
+lt-LT,Lithuanian,Lithuania,2022-11-06,2022-11-06,2022 m. lapkričio 6 d.,2022 m. lapkričio 6 d. sekmadienis,17:52,17:52:47,17:52:47 GMT,17:52:47 Grinvičo laikas
+lv-LV,Latvian,Latvia,06.11.22,2022. gada 6. nov.,2022. gada 6. novembris,svētdiena 2022. gada 6. novembris,17:52,17:52:47,17:52:47 GMT,17:52:47 Griničas laiks
+mk-MK,Macedonian,Macedonia,6.11.22,6.11.2022,6 ноември 2022,недела 6 ноември 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Средно време по Гринич
+nl-BE,Dutch,Belgium,6/11/2022,6 nov. 2022,6 november 2022,zondag 6 november 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Mean Time
+nl-NL,Dutch,Netherlands,06-11-2022,6 nov. 2022,6 november 2022,zondag 6 november 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Mean Time
+no-NO,Norwegian,Norway,06.11.2022,6. nov. 2022,6. november 2022,søndag 6. november 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich middeltid
+pl-PL,Polish,Poland,06.11.2022,6 lis 2022,6 listopada 2022,niedziela 6 listopada 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 czas uniwersalny
+pt-BR,Portuguese,Brazil,06/11/2022,6 de nov. de 2022,6 de novembro de 2022,domingo 6 de novembro de 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Horário do Meridiano de Greenwich
+pt-PT,Portuguese,Portugal,06/11/22,06/11/2022,6 de novembro de 2022,domingo 6 de novembro de 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Hora de Greenwich
+ro-RO,Romanian,Romania,06.11.2022,6 nov. 2022,6 noiembrie 2022,duminică 6 noiembrie 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Ora de Greenwhich
+ru-RU,Russian,Russian-federation,06.11.2022,6 нояб. 2022 г.,6 ноября 2022 г.,воскресенье 6 ноября 2022 г.,17:52,17:52:47,17:52:47 GMT,17:52:47 Среднее время по Гринвичу
+sh-SP,Serbian,Latin-Serbia,6.11.22.,06.11.2022.,06. novembar 2022.,nedelja 06. novembar 2022.,17:52,17:52:47,17:52:47 GMT,17:52:47 Srednje vreme po Griniču
+sk-SK,Slovak,Slovakia,6. 11. 2022,6. 11. 2022,6. novembra 2022,nedeľa 6. novembra 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 greenwichský čas
+sl-SL,Slovenian,Slovenia,6. 11. 22,6. nov. 2022,06. november 2022,nedelja 06. november 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwiški srednji čas
+sq-AL,Albanian,Albania,6.11.22,6 nën 2022,6 nëntor 2022,e diel 6 nëntor 2022,5:52 e pasdites,5:52:47 e pasdites,5:52:47 e pasdites, GMT 5:52:47 e pasdites Ora e Grinuiçit
+sv-SE,Swedish,Sweden,2022-11-06,6 nov. 2022,6 november 2022,söndag 6 november 2022,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwichtid
+th-TH,Thai,undefined,6/11/65,6 พ.ย. 2565,6 พฤศจิกายน 2565,วันอาทิตย์ที่ 6 พฤศจิกายน พ.ศ. 2565,17:52,17:52:47,17 นาฬิกา 52 นาที 47 วินาที GMT,17 นาฬิกา 52 นาที 47 วินาที เวลามาตรฐานกรีนิช
+tr-TR,Turkish,Turkey,6.11.2022,6 Kas 2022,6 Kasım 2022,6 Kasım 2022 Pazar,17:52,17:52:47,17:52:47 GMT,17:52:47 Greenwich Ortalama Saati
+uk-UA,Ukrainian,Ukraine,06.11.22,6 лист. 2022 р.,6 листопада 2022 р.,неділя 6 листопада 2022 р.,17:52,17:52:47,17:52:47 GMT,17:52:47 за Гринвічем
+zh-CN,Chinese,Simplified-China,2022/11/6,2022年11月6日,2022年11月6日 2022年11月6日星期日,下午5:52,下午5:52:47,GMT 下午5:52:47,格林尼治标准时间 下午5:52:47
+zh-TW,Chinese,Traditional-Taiwan,2022/11/6,2022年11月6日,2022年11月6日 2022年11月6日 星期日,下午5:52,下午5:52:47,下午5:52:47 [GMT],下午5:52:47 [格林威治標準時間]
