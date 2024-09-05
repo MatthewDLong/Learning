@@ -4,7 +4,7 @@
   "description": "",
   "main": "fizz-buzz.js",
   "scripts": {
-    "test": "jest --watch"
+    "test:watch": "jest --watch"
   },
   "jest": {
     "transform": {}
